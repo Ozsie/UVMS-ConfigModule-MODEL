@@ -1,3 +1,3 @@
 language: java
-before-script:
- - mvn clean install -Pgenerate-from-wsdl
+install:
+ - mvn install -Pgenerate-from-wsdl
