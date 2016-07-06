@@ -19,6 +19,7 @@
      	<logback.core.version>1.1.2</logback.core.version>
         <mockito.version>1.9.5</mockito.version>
         <junit.version>4.10</junit.version>
+        <project.scm.id>github</project.scm.id>
     </properties>
     
 	<dependencies>
@@ -177,6 +178,22 @@
                 <version>2.3</version>
                 <configuration>
                     <ejbVersion>3.1</ejbVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.8.1</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>src/main/java/eu/europa/ec/fisheries/wsdl</checkModificationExclude>
+                    </checkModificationExcludes>
                 </configuration>
             </plugin>
         </plugins>
