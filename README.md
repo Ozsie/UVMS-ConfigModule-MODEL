@@ -1,5 +1,7 @@
 # ConfigModule
 
+[![Build Status](https://travis-ci.org/Ozsie/UVMS-ConfigModule-MODEL.svg?branch=master)](https://travis-ci.org/Ozsie/UVMS-ConfigModule-MODEL)
+
 ####Module description/purpose
 
 The Config module is the main repository for all application settings. It stores both global and module-specific settings, and allows access to them by the application, typically through a REST interface. Settings can be accessed all at once (as a catalog), only the ones associated with a certain module including global settings or individually.
